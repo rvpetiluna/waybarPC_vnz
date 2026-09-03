@@ -1,4 +1,4 @@
-# 🔴 Minimalist Red & Black Waybar
+# 🔴 Minimalist Red & Black Waybar Config
 
 A sleek, modern, floating-pill Waybar setup for Arch Linux running Hyprland. Designed with high-contrast crimson accents, custom audio switching via Wofi, and an optimized, async `ddcutil` hardware brightness controller.
 
