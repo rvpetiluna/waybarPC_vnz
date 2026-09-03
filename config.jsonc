@@ -1,0 +1,70 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "margin-top": 8,
+    "margin-left": 10,
+    "margin-right": 10,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "custom/brightness",
+        "custom/power"   
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "HDMI-A-1": [ 6,7,8,9,10 ],
+            "DP-3": [ 1,2,3,4,5 ] 
+        }
+    },
+
+    "clock": {
+        "format": "{:L%a %b %d | %H:%M}",
+        "tooltip-format": "<span font='JetBrainsMono Nerd Font'>{calendar}</span>",
+        "calendar": {
+                    "format": {
+                                "months":     "<span color='#ff0000'><b>{}</b></span>",
+                                "weekdays":   "<span color='#00FF00'><b>{}</b></span>",
+                                "today":      "<span color='#ff0000'>{}</span>"
+                            }
+                    }
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "max-volume": 150,
+        "scroll-step": 5,
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "~/.config/waybar/scripts/audio-menu.sh",
+        "on-click-right": "pavucontrol"
+    },
+
+    "custom/power": {
+        "format" : "⏻",
+        "tooltip": false,
+        "on-click": "wlogout -p layer-shell"
+    },
+
+"custom/brightness": {
+    "format": "󰃠 {}%",
+    "exec": "~/.config/waybar/scripts/brightness.sh",
+    "interval": 0.2,
+    "on-scroll-up": "~/.config/waybar/scripts/brightness.sh up",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness.sh down",
+    "tooltip": false
+}
+}

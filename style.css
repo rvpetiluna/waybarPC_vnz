@@ -1,0 +1,77 @@
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+window#waybar {
+    color: #ffffff;            /* Text color */
+}
+
+/*#region Workspaces*/
+#workspaces button {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: #000000; /* Your dark pill background */
+    border-radius: 20px;
+    padding: 0px 12px;
+}
+
+#workspaces button{
+    background-color: transparent;
+    padding: 5px 10px;
+    /* Creates a 3px thick underline at the bottom of the button */
+}
+
+#workspaces button.active {
+    background-color: transparent;
+    color: #ff0000; /* Accent color for text */
+    background-color: rgb(75, 0, 0);
+    margin: 0;
+    /* Creates a 3px thick underline at the bottom of the button */
+}
+
+#workspaces button:hover {
+    background-color: rgb(55, 0, 0);
+    color: #ffffff; /* Accent color for text */
+}
+/* #endregion*/
+
+/*#region pulseaudio*/
+#pulseaudio{
+    color: #ffffff;
+    margin: 0 5px;
+}
+
+#pulseaudio:hover{
+    color: #ff0000;
+    transition: all 0.3s ease;
+}
+/*#endregion*/
+
+/*#region power button*/
+#custom-power {
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+#custom-power:hover {
+    color: #ff0000;
+    transition: all 0.3s ease;
+}
+/*#endregion*/
+
+tooltip {
+    background: #000000;
+    border-radius: 12px;
+}
+
+#custom-monitor-brightness {
+    padding: 0 10px;
+    color: #89b4fa;
+}
